@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="okennyd">
+  <meta name="description" content="A functioning digital clock with dqte and a vool relaxing song">
+  <meta name="keyword" content="clock, time, date, relaxing music">
+  <link rel="shortcut icon" type="image/x-icon" href="/img/oacube.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
+  <title>clock</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div id="background" class="">
+    <div class="clock">
+      <div id="time"></div>
+      <div id="date"></div>
+    </div>
+    <div class="greeting">
+      <p>good <span id="dayTime"></span> <span id="name" contenteditable="true"></span></p>
+    </div>
+    <div class="question">
+      <label id="label" for="text">what is on your mind this <span id="dayTime"></span>?</label>
+      <p contenteditable="true" id="focus"></p>
+    </div>
+  </div>
+  <script src="js/clock.js"></script>
+</body>
+
+</html>
