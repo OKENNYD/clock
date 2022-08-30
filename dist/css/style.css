@@ -60,7 +60,7 @@
 }
 
 #time {
-  font-weight: 800;
+  font-weight: 600;
   font-size: 160px;
 }
 
@@ -82,7 +82,68 @@
   font-size: 40px;
   border: none;
   outline: none;
+  color: #000000;
+}
+audio{
+  display: none;
+}
+.music{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.btn3{
+  margin-top: 50px;
+  animation-name: btn1;
+  animation-duration: 2s;
+  animation-play-state: paused;
+  animation-iteration-count: infinite;
+}
+@keyframes btn1 {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+.btn1{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  box-sizing: border;
+}
+
+.btn2{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  font-size: 110px;
   color: #fff;
+  background-color: royalblue;
+  position: relative;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: -120px;
+}
+.btn3{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  font-size: 110px;
+  color: #fff;
+  background-color: royalblue;
 }
 
 @media(max-width: 500px) {
@@ -107,7 +168,7 @@
   }
 
   .question {
-    margin-top: 40px;
+    margin-top: 20px;
   }
 
   .question label {
@@ -117,5 +178,16 @@
 
   .question p {
     font-size: 20px;
+  }
+  .music{
+    margin-top: 40px;
+  }
+  .btn2{
+    top: -60px;
+  }
+  .btn2, .btn3{
+    width: 60px;
+    height: 60px;
+    font-size: 50px;
   }
 }

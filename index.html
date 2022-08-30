@@ -11,7 +11,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="/img/oacube.png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
   <title>clock</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="dist/css/style.css">
 </head>
 
 <body>
@@ -27,8 +27,17 @@
       <label id="label" for="text">what is on your mind this <span id="dayTime"></span>?</label>
       <p contenteditable="true" id="focus"></p>
     </div>
+    <div class="music">
+      <audio controls loop="true"></audio>
+      <div class="musicBtn">
+        <div class="btn1">
+          <div class="btn3" id="btn3"></div>
+          <div id="sound" class="check btn2 material-icons-sharp">audiotrack</div>
+        </div>
+      </div>
+    </div>
   </div>
-  <script src="js/clock.js"></script>
+  <script src="dist/js/clock.js"></script>
 </body>
 
 </html>

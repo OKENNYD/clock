@@ -1,4 +1,3 @@
-
 function clock() {
   //data
   let data = new Date(),
@@ -74,6 +73,7 @@ function setname(e) {
     localStorage.setItem('name', e.target.innerText);
   }
 }
+
 function setfocus(e) {
   if (e.target === 'keypress') {
     if (e.which == 13 && e.keycode == 13) {
@@ -89,3 +89,28 @@ name.addEventListener('keypress', setname)
 name.addEventListener('blur', setname)
 focus.addEventListener('keypress', setfocus)
 focus.addEventListener('blur', setfocus)
+
+let sound = document.getElementById('sound'),
+  audio = document.querySelector('audio'),
+  hour = new Date().getHours(),
+  btn3 = document.getElementById('btn3');
+if (hour < 12) {
+  audio.setAttribute('src', '/dist/audio/clock1.mp3')
+} else if (hour < 18) {
+  audio.setAttribute('src', '/dist/audio/clock2.mp3')
+} else if (hour < 21) {
+  audio.setAttribute('src', '/dist/audio/clock3.mp3')
+} else {
+  audio.setAttribute('src', '/dist/audio/clock4.mp3')
+}
+sound.addEventListener('click', (e) => {
+  if (sound.classList.contains('check')) {
+    sound.classList.remove('check')
+    btn3.style.animationPlayState = 'running'
+    audio.play()
+  } else {
+    sound.classList.add('check')
+    btn3.style.animationPlayState = 'paused'
+    audio.pause()
+  }
+})
